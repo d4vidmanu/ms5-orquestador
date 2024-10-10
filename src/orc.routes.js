@@ -5,6 +5,7 @@ import {
   startRide,
   endRide,
   submitReview,
+  getScooters,  // Nuevo endpoint
   getPendingMantenimientos,
   getMantenimientosByTecnicoId,
   updateMantenimientoStatusAndTecnico,
@@ -19,6 +20,9 @@ router.post("/register", register);
 router.post("/iniciar_viaje", startRide);
 router.put("/terminar_viaje/:id", endRide);
 router.post("/usuario/:user_id/resenas", submitReview);
+
+// Nuevo endpoint para obtener scooters
+router.get("/scooters", getScooters);
 
 // Rutas de mantenimiento
 router.get("/mantenimientos/pendientes", getPendingMantenimientos);
