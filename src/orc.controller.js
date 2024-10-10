@@ -161,7 +161,7 @@ export const updateMantenimientoStatusAndTecnico = async (req, res) => {
 
 export const getScooters = async (req, res) => {
   try {
-    const response = await axios.get(`${apiRoutes.scooterManagement}/scooters`);
+    const response = await axios.get(`${apiRoutes.scooterManagement}/avaliblescooters`);
     res.status(response.status).json(response.data);
   } catch (error) {
     if (error.response) {
